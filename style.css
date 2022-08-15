@@ -1,0 +1,186 @@
+*{
+    box-sizing: border-box;
+    --body-text-two:'Amatic SC', cursive;
+    --body-text:'Nanum Gothic Coding', monospace;
+    font-family: var(--body-text);
+}
+
+body{
+    display:flex;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    width:45%;
+    height: 100vh;
+    background-image: url('./imgs/pexels-katarzyna-modrzejewska-1314550.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+.hero-text{
+    font-size: x-large;
+    background-color: black;
+    margin-top:20%;
+    color: aliceblue;
+    opacity: .6;
+    text-align: center;
+}
+
+h4{
+    font-size: medium;
+}
+
+.photo-credit{
+    text-align: center;
+    margin-top: auto;
+    color: aliceblue;
+}
+
+.content{
+    width: 55%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    flex-flow: column wrap;
+    margin:1rem 6rem 1rem 1rem;
+    padding:1rem;
+    font-size: x-large;
+    border:2px solid #1f2937;
+    box-shadow: 1px 1px 2px #1f2937;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+#form-title{
+    font-size: x-large;
+    font-weight: 600;
+}
+
+#form-fields{
+    width: 100%;
+    background-color: aliceblue;
+    box-shadow: 0px 4px 3px grey;
+    padding: 2rem;
+}
+    
+#form-fields ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    width:fit-content;
+    list-style-type: none;
+    margin:0px;
+    padding:25px;
+}
+
+#form-fields li {
+    margin:0 2.5rem 1.5rem 0;
+    padding:0;
+}
+
+li {
+    margin:0 0 1rem 0;
+    padding:0;
+}
+
+label{
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+label,input{
+   font-size: larger;
+   display: flex;
+   flex-direction: column;
+   margin: 0 0 2px 0;
+}
+
+input{
+    border-radius: 7px;
+}
+
+input:focus{
+    border:3px solid gold;
+    box-shadow: 1px 3px 2px #1f2937;
+}
+
+#buttons ul{
+    list-style-type: none;
+    margin:0px;
+    padding: 20px 0px 5px 60px;
+}
+
+#buttons li{
+    color:#1f2937;
+}
+
+button{
+    font-size: large;
+    padding: 5px 15px;
+    margin-top:15px;
+    background-color: transparent;
+    border: 1px solid #1f2937;
+    color:#1f2937;
+    border-radius: 6px;
+    box-shadow: 3px 3px 3px gray;
+
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #1f2937;
+    color: aliceblue;
+    top: 1px;
+    left: 1px;
+}
+
+@media only screen and (max-width:980px){
+    
+    body {
+        display:flex;
+        flex-direction: column;
+        width:100%;
+        height: auto;
+    }
+
+    .hero{
+        width:100vw;
+    }
+
+    .content{
+        width:100vw
+    }
+
+    .header{
+        width:fit-content;
+    }
+
+    label,input{
+        min-width:250px;
+    }
+
+}
+
+@media only screen and (max-width:650px){
+    .hero{
+        height: fit-content;
+    }
+
+    #form-fields ul {
+        grid-template-columns: 1fr;
+    }
+}
